@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/global.css" />
+		<link rel="stylesheet" href="../styles/form-page1.css" />
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<main>
+			<img src="../assets/two.svg" alt="man" />
+			<section>
+				<form action="./form-page2.html">
+					<label for="account-status"
+						>What is the status of your account?</label
+					>
+					<div class="custom-select">
+						<select name="account-status" id="account-status" required>
+							<option value="no">
+								I have not created an account yet.
+							</option>
+							<option value="yes">I already have an account.</option>
+						</select>
+					</div>
+
+					<fieldset>
+						<legend>In which financial markets do you operate?</legend>
+
+						<p>
+							<input
+								type="radio"
+								name="markets"
+								id="stock-market"
+								required
+							/>
+							<label for="stock-market">stock market</label>
+						</p>
+						<p>
+							<input type="radio" name="markets" id="foreign-exchange" />
+							<label for="foreign-exchange">foreign exchange</label>
+						</p>
+						<p>
+							<input type="radio" name="markets" id="commodity" />
+							<label for="commodity">commodity</label>
+						</p>
+						<p>
+							<input type="radio" name="markets" id="bond-market" />
+							<label for="bond-market">bond market</label>
+						</p>
+						<p>
+							<input type="radio" name="markets" id="crypto-market" />
+							<label for="crypto-market">cryptocurrency market</label>
+						</p>
+					</fieldset>
+
+					<p>
+						<a href="./start-survey.html">
+							<button type="button">Back</button>
+						</a>
+						<a href="#" id="next-button">
+							<button type="submit">Next</button>
+						</a>
+						<a href="./form-page2.html">
+							<button type="button">Skip</button>
+						</a>
+					</p>
+				</form>
+			</section>
+		</main>
+
+		<script src="../dist/scripts/form-page1.js"></script>
+	</body>
+</html>
