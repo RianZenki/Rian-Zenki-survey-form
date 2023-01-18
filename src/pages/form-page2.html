@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/global.css" />
+		<link rel="stylesheet" href="../styles/form-page2.css" />
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<main>
+			<img src="../assets/three.svg" alt="man" />
+			<section>
+				<form action="#">
+					<label for="account-status">How do you decide to invest?</label>
+					<div class="custom-select">
+						<select name="account-status" id="account-status" required>
+							<option value="not">I have not invested yet.</option>
+							<option value="yes">I already have invested.</option>
+						</select>
+					</div>
+
+					<fieldset class="checkbox-field">
+						<legend>
+							What resources have you used or are you using for your
+							training
+						</legend>
+
+						<p class="checkbox-wrapper">
+							<input
+								type="checkbox"
+								name="books-articles"
+								id="books-articles"
+							/>
+							<label for="books-articles">books and articles</label>
+						</p>
+						<p class="checkbox-wrapper">
+							<input type="checkbox" name="videos" id="videos" />
+							<label for="videos">youtuve tutorial videos</label>
+						</p>
+						<p class="checkbox-wrapper">
+							<input type="checkbox" name="courses" id="courses" />
+							<label for="courses">online or face to face courses</label>
+						</p>
+						<p class="checkbox-wrapper">
+							<input type="checkbox" name="experience" id="experience" />
+							<label for="experience"
+								>experience with little investment</label
+							>
+						</p>
+					</fieldset>
+
+					<p class="buttons-wrapper">
+						<a href="./form-page1.html">
+							<button type="button">Back</button>
+						</a>
+						<a href="#" id="next-button">
+							<button type="button">Next</button>
+						</a>
+						<a href="./form-page3.html">
+							<button type="button">Skip</button>
+						</a>
+					</p>
+				</form>
+			</section>
+		</main>
+
+		<script src="../dist/scripts/form-page2.js"></script>
+	</body>
+</html>
