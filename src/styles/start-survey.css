@@ -1,0 +1,45 @@
+main {
+   width: 100vw;
+   height: 100vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+img {
+   width: 550px;
+   margin-right: 80px;
+}
+
+section {
+   width: 480px;
+   text-align: center;
+}
+
+h1 {
+   width: 473px;
+   font-size: 40px;
+   font-weight: 700;
+   line-height: 46px;
+
+   margin-bottom: 14px;
+}
+
+section > p:first-of-type {
+   width: 443px;
+   font-size: 28px;
+   line-height: 33px;
+   margin-bottom: 30px;
+}
+
+button {
+   width: 200px;
+   height: 36px;
+
+   font-size: 22px;
+}
+
+.buttons-wrapper a + a {
+   margin-left: 27px;
+}
