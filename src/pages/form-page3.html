@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/global.css" />
+		<link rel="stylesheet" href="../styles/form-page3.css" />
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<main>
+			<img src="../assets/four.svg" alt="man" />
+			<section>
+				<form action="#">
+					<div class="textarea-wrapper">
+						<label for="user-exp">
+							If you or someone close to you has already made a loss on
+							the investment, write down the details
+						</label>
+						<div class="text-area">
+							<textarea
+								name="user-exp"
+								id="user-exp"
+								cols="30"
+								rows="7"
+								maxlength="130"
+								required
+							></textarea>
+							<p class="counter">Remaning characters: 130</p>
+						</div>
+					</div>
+
+					<p class="buttons-wrapper">
+						<a href="./form-page2.html">
+							<button type="button">Back</button>
+						</a>
+						<a href="#" id="next-button">
+							<button>Next</button>
+						</a>
+						<a href="./form-page4.html">
+							<button type="button">Skip</button>
+						</a>
+					</p>
+				</form>
+			</section>
+		</main>
+		<script src="../dist/scripts/form-page3.js"></script>
+	</body>
+</html>
