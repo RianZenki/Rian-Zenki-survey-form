@@ -1,0 +1,75 @@
+main {
+   width: 100vw;
+   height: 100vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+img {
+   width: 552px;
+   margin-right: 103px;
+}
+
+section {
+   width: 460px;
+}
+
+.input-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.input-wrapper label{
+   font-size: 26px;
+   font-weight: 700;
+   margin-bottom: 23px;
+}
+
+.input-wrapper input{
+   font-size: 27px;
+   border: solid 1px rgba(0, 0, 0, .25);
+   padding: 9px 20px;
+   border-radius: 20px;
+   outline: none;
+   transition: .2s;
+}
+
+.input-wrapper input::placeholder{
+   color:rgba(0, 0, 0, .25);
+}
+
+.input-wrapper input:focus{
+   border: solid 1px rgb(71, 82, 66);
+}
+
+.input-wrapper + .input-wrapper{
+   margin-top: 27px;
+}
+
+/* Removendo as setas do number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-wrapper input[type="number"] {
+   width: 152px;
+   margin-bottom: 44px;
+}
+
+.buttons-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   max-width: 420px;
+}
+
+.buttons-wrapper button {
+   width: 100%;
+   height: 36px;
+
+   font-size: 22px;
+   font-weight: 700;
+}

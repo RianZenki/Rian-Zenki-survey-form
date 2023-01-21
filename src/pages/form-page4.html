@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../styles/global.css" />
+		<link rel="stylesheet" href="../styles/form-page4.css" />
+		<title>Survey Form</title>
+	</head>
+	<body>
+		<main>
+			<img src="../assets/five.svg" alt="man" />
+			<section>
+				<form action="#">
+					<p class="input-wrapper">
+						<label for="name">Full Name:</label>
+						<input
+							type="text"
+							id="name"
+							placeholder="Nasser Toghiri"
+							required
+						/>
+					</p>
+
+					<p class="input-wrapper">
+						<label for="">Email:</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="N.Toghiri@Gmail.com"
+							required
+						/>
+					</p>
+
+					<p class="input-wrapper">
+						<label for="">Age:</label>
+						<input type="number" id="age" placeholder="-- --" required />
+					</p>
+
+					<p class="buttons-wrapper">
+						<a href="./form-page3.html">
+							<button type="button">Back</button>
+						</a>
+						<button id="next-button">Submit</button>
+					</p>
+				</form>
+			</section>
+			<script src="../dist/scripts/form-page4.js"></script>
+		</main>
+	</body>
+</html>
