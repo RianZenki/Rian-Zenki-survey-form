@@ -45,5 +45,14 @@ buttonForm4.addEventListener("click", (event: Event) => {
 	}
 
 	localStorage.clear();
-	location.href = "../index.html";
+	openModal();
 });
+
+function openModal() {
+	const modal = document.querySelector(".modal")! as HTMLElement;
+
+	modal.style.display = "flex";
+	setTimeout(() => {
+		location.href = "../index.html";
+	}, 2000);
+}

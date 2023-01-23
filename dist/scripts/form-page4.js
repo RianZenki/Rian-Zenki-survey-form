@@ -33,5 +33,12 @@ buttonForm4.addEventListener("click", (event) => {
         localStorage.setItem("userInfos", JSON.stringify(newUserInfos));
     }
     localStorage.clear();
-    location.href = "../index.html";
+    openModal();
 });
+function openModal() {
+    const modal = document.querySelector(".modal");
+    modal.style.display = "flex";
+    setTimeout(() => {
+        location.href = "../index.html";
+    }, 2000);
+}

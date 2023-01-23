@@ -7,7 +7,7 @@ main {
    align-items: center;
 }
 
-img {
+main > img {
    width: 552px;
    margin-right: 103px;
 }
@@ -75,9 +75,47 @@ input::-webkit-inner-spin-button {
    font-weight: 700;
 }
 
+.modal {
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   background-color: rgba(0, 0, 0, .5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+
+.modal .container {
+   width: 50%;
+   height: 60%;
+   min-width: 500px;
+   background-color: #ffffff;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal .container .check {
+   width: 200px;
+   margin-bottom: 40px;
+}
+
+.modal .container h2 {
+   font-size: 32px;
+   margin-bottom: 12px;
+}  
+
+.modal .container p {
+   text-align: center;
+   font-size: 26px;
+}
+
 @media screen and (max-width: 1180px) {
 
-   img {
+   main > img {
       width: 480px;
       margin-right: 55px;
    }
@@ -97,11 +135,18 @@ input::-webkit-inner-spin-button {
    .buttons-wrapper {
       max-width: 360px;
    }
-
+  
+   .modal .container h2 {
+      font-size: 28px;
+   }  
+   
+   .modal .container p {
+      font-size: 22px;
+   }
 }
 
 @media screen and (max-width: 930px) {
-   img {
+   main > img {
       width: 400px;
       margin-right: 55px;
    }
@@ -131,7 +176,7 @@ input::-webkit-inner-spin-button {
       justify-content: initial;
    }
 
-   img {
+   main > img {
       width: 400px;
       margin: 20px 0 23px;
       overflow-x: hidden;
@@ -181,7 +226,7 @@ input::-webkit-inner-spin-button {
       justify-content: initial;
    }
 
-   img {
+   main > img {
       width: 380px;
       margin: 20px 0 23px;
    }
@@ -216,6 +261,10 @@ input::-webkit-inner-spin-button {
    .buttons-wrapper button {
       font-size: 16px;
       height: 26px;
+   }
+
+   .modal .container {
+      min-width: 400px;
    }
 
 }
