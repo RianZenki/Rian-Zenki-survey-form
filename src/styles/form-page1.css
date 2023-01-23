@@ -21,14 +21,18 @@ form {
    flex-direction: column;
 }
 
-form > label {
-   font-size: 26px;
-   font-weight: 700;
-   margin-bottom: 16px;
-   line-height: 31px;
+.select-wrapper {
+   display: flex;
+   flex-direction: column;
 }
 
-form .custom-select {
+.select-wrapper label {
+   font-size: 26px;
+   font-weight: 700;
+   margin-bottom: 27px;
+}
+
+.select-wrapper .custom-select {
    width: 460px;
    border: 1px solid rgba(0, 0, 0, .25);
    border-radius: 20px;
@@ -36,7 +40,7 @@ form .custom-select {
    position: relative;
 }
 
-form .custom-select::before {
+.select-wrapper .custom-select::before {
    content: "";
    width: 0;
    height: 0;
@@ -50,7 +54,7 @@ form .custom-select::before {
    left: 10px;
 }
 
-form select {
+.select-wrapper .custom-select select {
    appearance: none;
    border: none;
    border-radius: inherit;
@@ -58,74 +62,315 @@ form select {
    width: 100%;
    padding: 8px 12px 8px 45px;
    font-size: 27px;
-   line-height: 32px;
    outline: none;
 }
 
-form .custom-select:has(select:focus) {
+.select-wrapper .custom-select:has(select:focus) {
    border: 1px solid #475242;
 }
 
-form .custom-select:has(select:focus)::before {
+.select-wrapper .custom-select:has(select:focus)::before {
    border-color: rgba(62, 178, 94, 1) transparent transparent transparent;
 }
 
-form fieldset {
+fieldset {
    border: none;
-   margin-bottom: 39px;
+   margin-bottom: 48px;
 }
 
-form fieldset legend {
+fieldset legend {
    font-size: 26px;
    font-weight: 700;
-   margin-bottom: 17px;
+   margin-bottom: 34px;
 }
 
-form fieldset > p {
+fieldset .radio-wrapper {
    display: flex;
    align-items: center;
    gap: 11px;
    line-height: inherit;
 }
 
-form fieldset > p + p {
+fieldset .radio-wrapper + .radio-wrapper {
    margin-top: 17px;
 }
 
-form fieldset > p input[type="radio"] {
+fieldset .radio-wrapper input[type="radio"] {
    appearance: none;
    background-color: rgba(62, 178, 94, 0.3);
    width: 25px;
    height: 25px;
    border-radius: 50%;
-   transition: 0.2s;
+   transition: background-color 0.3s;
 }
 
-form fieldset > p input[type="radio"]:checked {
+fieldset .radio-wrapper input[type="radio"]:checked {
    background-color:rgba(62, 178, 94, 1);
 }
 
-form fieldset > p label {
+fieldset .radio-wrapper label {
    font-size: 26px;
    padding-bottom: 3px;
 }
 
-form > p {
+form .buttons-wrapper {
    display: flex;
    flex-wrap: wrap;
    gap: 15px 27px;
+   max-width: 420px;
 }
 
-form > p a {
+form .buttons-wrapper a {
    flex: 1;
 }
 
-form > p button {
+form .buttons-wrapper button {
    width: 100%;
    height: 36px;
    font-size: 22px;
 }
 
-form > p a:last-of-type {
+form .buttons-wrapper a:last-of-type {
    flex-basis: 100%;
+}
+
+@media screen and (max-width: 1180px) {
+
+   img {
+      width: 480px;
+      margin-right: 65px;
+   }
+
+   section {
+      width: 400px;
+   }
+
+   .select-wrapper label {
+      font-size: 22px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 380px;
+   }
+
+   .select-wrapper .custom-select select {
+      font-size: 20px;
+   }
+
+   fieldset legend {
+      font-size: 22px;
+   }
+
+   fieldset .radio-wrapper input[type="radio"] {
+      width: 23px;
+      height: 23px;
+   }
+
+   fieldset .radio-wrapper label {
+      font-size: 22px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 360px;
+   }
+}
+
+@media screen and (max-width: 930px) {
+
+   img {
+      width: 400px;
+      margin-right: 50px;
+   }
+
+   section {
+      width: 320px;
+   }
+
+   .select-wrapper label {
+      font-size: 20px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 300px;
+   }
+
+   .select-wrapper .custom-select select {
+      font-size: 20px;
+   }
+
+   fieldset legend {
+      font-size: 22px;
+   }
+
+   fieldset .radio-wrapper input[type="radio"] {
+      width: 23px;
+      height: 23px;
+   }
+
+   fieldset .radio-wrapper label {
+      font-size: 20px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 300px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+      overflow-x: hidden;
+   }
+
+   img {
+      width: 400px;
+      margin: 20px 0;
+   }
+
+   section {
+     width: 360px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .select-wrapper label {
+      font-size: 20px;
+      margin-bottom: 8px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 320px;
+      margin-bottom: 16px;
+   }
+
+   .select-wrapper .custom-select::before {
+      border: 10px solid transparent;
+      border-radius: 5px;
+      border-color: rgba(62, 178, 94, 0.3) transparent transparent transparent;
+      top: 50%;
+      transform: translateY(-10%);
+      left: 6px;
+   }
+
+   .select-wrapper .custom-select select {
+      width: 100%;
+      font-size: 18px;
+      padding-left: 28px;
+   }
+   
+   fieldset {
+      margin-bottom: 26px;
+   }
+
+   fieldset legend {
+      font-size: 20px;
+      margin-bottom: 12px;
+   }
+
+   fieldset .radio-wrapper {
+      gap: 7px;
+   }
+   
+   fieldset .radio-wrapper + .radio-wrapper {
+      margin-top: 7px;
+   }
+
+   fieldset .radio-wrapper input[type="radio"] {
+      width: 20px;
+      height: 20px;
+   }
+
+   fieldset .radio-wrapper label {
+      font-size: 20px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 320px;
+      gap: 10px 18px;
+      margin-bottom: 20px;
+   }  
+
+   form .buttons-wrapper button {
+      height: 26px;
+      font-size: 16px;
+   }
+}
+
+@media screen and (max-width: 650px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+   }
+
+   img {
+      width: 360px;
+      margin: 20px 0 21px;
+   }
+
+   section {
+     width: 326px;
+   }
+
+   .select-wrapper label {
+      font-size: 16px;
+      margin-bottom: 8px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 280px;
+      margin-bottom: 11px;
+   }
+
+   .select-wrapper .custom-select::before {
+      border: 8px solid transparent;
+      border-radius: 5px;
+      border-color: rgba(62, 178, 94, 0.3) transparent transparent transparent;
+      top: 50%;
+      transform: translateY(-10%);
+      left: 8px;
+   }
+
+   .select-wrapper .custom-select select {
+      width: 100%;
+      font-size: 16px;
+      padding-left: 28px;
+   }
+   
+   fieldset {
+      margin-bottom: 26px;
+   }
+
+   fieldset legend {
+      font-size: 16px;
+      margin-bottom: 12px;
+   }
+
+   fieldset .radio-wrapper {
+      gap: 7px;
+   }
+   
+   fieldset .radio-wrapper + .radio-wrapper {
+      margin-top: 7px;
+   }
+
+   fieldset .radio-wrapper input[type="radio"] {
+      width: 15px;
+      height: 15px;
+   }
+
+   fieldset .radio-wrapper label {
+      font-size: 16px;
+   }
+
+   form .buttons-wrapper {
+      width: 300px;
+      gap: 10px 18px;
+   }  
+
+   form .buttons-wrapper button {
+      height: 26px;
+      font-size: 16px;
+   }
 }

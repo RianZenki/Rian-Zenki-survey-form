@@ -13,22 +13,25 @@
 			<img src="../assets/two.svg" alt="man" />
 			<section>
 				<form action="./form-page2.html">
-					<label for="account-status"
-						>What is the status of your account?</label
-					>
-					<div class="custom-select">
-						<select name="account-status" id="account-status" required>
-							<option value="no">
-								I have not created an account yet.
-							</option>
-							<option value="yes">I already have an account.</option>
-						</select>
+					<div class="select-wrapper">
+						<label for="account-status">
+							What is the status of your account?
+						</label>
+						<div class="custom-select">
+							<select name="account-status" id="account-status" required>
+								<option value="default">
+									I have not created an account yet.
+								</option>
+								<option value="financial-loss">Financial loss.</option>
+								<option value="profiting">Profiting.</option>
+							</select>
+						</div>
 					</div>
 
 					<fieldset>
 						<legend>In which financial markets do you operate?</legend>
 
-						<p>
+						<p class="radio-wrapper">
 							<input
 								type="radio"
 								name="markets"
@@ -37,25 +40,45 @@
 							/>
 							<label for="stock-market">stock market</label>
 						</p>
-						<p>
-							<input type="radio" name="markets" id="foreign-exchange" />
+						<p class="radio-wrapper">
+							<input
+								type="radio"
+								name="markets"
+								id="foreign-exchange"
+								value="foreign-exchange"
+							/>
 							<label for="foreign-exchange">foreign exchange</label>
 						</p>
-						<p>
-							<input type="radio" name="markets" id="commodity" />
+						<p class="radio-wrapper">
+							<input
+								type="radio"
+								name="markets"
+								id="commodity"
+								value="commodity"
+							/>
 							<label for="commodity">commodity</label>
 						</p>
-						<p>
-							<input type="radio" name="markets" id="bond-market" />
+						<p class="radio-wrapper">
+							<input
+								type="radio"
+								name="markets"
+								id="bond-market"
+								value="bond-market"
+							/>
 							<label for="bond-market">bond market</label>
 						</p>
-						<p>
-							<input type="radio" name="markets" id="crypto-market" />
+						<p class="radio-wrapper">
+							<input
+								type="radio"
+								name="markets"
+								id="crypto-market"
+								value="crypto-market"
+							/>
 							<label for="crypto-market">cryptocurrency market</label>
 						</p>
 					</fieldset>
 
-					<p>
+					<p class="buttons-wrapper">
 						<a href="./start-survey.html">
 							<button type="button">Back</button>
 						</a>
