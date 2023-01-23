@@ -20,7 +20,8 @@ button {
    color: #ffffff;
    font-weight: 700;
    cursor: pointer;
-   transition: 0.3s;
+   transition: background-color 0.3s;
+   transition: color 0.3s;
 }
 
 button:hover {
