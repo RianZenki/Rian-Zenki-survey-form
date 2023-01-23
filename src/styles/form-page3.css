@@ -28,25 +28,22 @@ section {
    margin-bottom: 26px;
 }
 
-.textarea-wrapper div h3 {
-   color: red;
-}
-
 .textarea-wrapper .text-area {
    position: relative;   
 }
 
 .textarea-wrapper .text-area textarea {
-   width: 460px;
+   max-width: 460px;
+   width: 100%;
    height: 225px;
    border-radius: 26px;
    border: 1px solid rgba(0, 0, 0, .25);
    padding: 18px;
-   font-size: 22px;
+   font-size: 18px;
    resize: none;
    outline: none;
 
-   transition: .2s;
+   transition: border .3s;
 }
 
 .textarea-wrapper .text-area .counter {
@@ -54,32 +51,10 @@ section {
    right: 40px;
    bottom: 20px;
    color: rgba(0, 0, 0, 0.25);
-
 }
 
 .textarea-wrapper .text-area textarea:focus {
    border: 1px solid rgba(71, 82, 66, 1);
-}
-
-.checkbox-field .checkbox-wrapper + .checkbox-wrapper {
-   margin-top: 17px;
-}
-
-.checkbox-field .checkbox-wrapper input[type="checkbox"] {
-   appearance: none;
-   background-color: rgba(62, 178, 94, 0.3);
-   width: 25px;
-   height: 25px;
-   border-radius: 5px;
-   transition: 0.2s;
-}
-
-.checkbox-field .checkbox-wrapper input[type="checkbox"]:checked {
-   background-color:rgba(62, 178, 94, 1);
-}
-
-.checkbox-field .checkbox-wrapper label {
-   font-size: 26px;
 }
 
 .buttons-wrapper {
@@ -103,3 +78,148 @@ section {
    font-size: 22px;
 }
 
+@media screen and (max-width: 1180px) {
+
+   img {
+      width: 480px;
+      margin-right: 55px;
+   }
+
+   section {
+      width: 400px;
+      margin-right: 20px;
+   }
+
+   .textarea-wrapper label {
+      font-size: 22px;
+   }
+
+
+   .textarea-wrapper .text-area textarea {
+      max-width: 390px;
+   }
+
+
+   form .buttons-wrapper {
+      max-width: 360px;
+   }
+}
+
+@media screen and (max-width: 930px) {
+
+   img {
+      width: 400px;
+      margin-right: 40px;
+   }
+
+   section {
+      width: 320px;
+   }
+
+   .textarea-wrapper label {
+      font-size: 20px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 360px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+   }
+
+   img {
+      width: 400px;
+      margin: 20px 0 23px;
+   }
+
+   section {
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .textarea-wrapper {
+      margin-bottom: 23px;
+   }
+
+   .textarea-wrapper label {
+      font-size: 20px;
+      width: 360px;
+      margin-bottom: 10px;
+   }
+
+   .textarea-wrapper .text-area textarea {
+      width: 340px;
+      height: 130px;
+      border-radius: 20px;
+      padding: 14px;
+      font-size: 16px;
+   }
+
+   .textarea-wrapper .text-area .counter {
+      font-size: 14px;
+   }
+
+   .buttons-wrapper {
+      max-width: 360px;
+   }
+
+   .buttons-wrapper button {
+      font-size: 20px;
+      height: 30px;
+   }
+}
+
+@media screen and (max-width: 650px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+   }
+
+   img {
+      width: 360px;
+      margin: 20px 0 23px;
+   }
+
+   section {
+      width: 302px;
+   }
+
+   .textarea-wrapper {
+      margin-bottom: 23px;
+   }
+
+   .textarea-wrapper label {
+      font-size: 16px;
+      width: 260px;
+      margin-bottom: 10px;
+   }
+
+   .textarea-wrapper .text-area textarea {
+      width: 280px;
+      height: 130px;
+      border-radius: 20px;
+      padding: 14px;
+      font-size: 16px;
+   }
+
+   .textarea-wrapper .text-area .counter {
+      font-size: 14px;
+   }
+
+   .buttons-wrapper {
+      width: 300px;
+      gap: 9px 18px;
+   }
+
+   .buttons-wrapper button {
+      font-size: 16px;
+      height: 26px;
+   }
+
+}
