@@ -1,4 +1,4 @@
-﻿# Survey-form
+﻿# Survey form
 this is a web application to collect data about past experiences of people in financial markets, and find the reasons for their failures.
 
 ## Technology
