@@ -8,7 +8,7 @@ buttonForm2.addEventListener("click", (event: Event) => {
 		'input[type="checkbox"]:checked'
 	)! as NodeListOf<HTMLInputElement>;
 
-	if (checkbox.length > 0 && select.value) {
+	if (checkbox.length > 0 && select.value !== "default") {
 		const resourcesList = [...checkbox].map((checkbox) => checkbox.value);
 
 		const newUserInfos = {
@@ -31,6 +31,6 @@ buttonForm2.addEventListener("click", (event: Event) => {
 
 		location.href = "./form-page3.html";
 	} else {
-		alert("Select one option to continue");
+		alert("Please, select an option to continue");
 	}
 });

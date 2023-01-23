@@ -21,14 +21,19 @@ form {
    flex-direction: column;
 }
 
-form > label {
+.select-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.select-wrapper label {
    font-size: 26px;
    font-weight: 700;
-   margin-bottom: 16px;
+   margin-bottom: 27px;
    line-height: 31px;
 }
 
-.custom-select {
+.select-wrapper .custom-select {
    width: 460px;
    border: 1px solid rgba(0, 0, 0, .25);
    border-radius: 20px;
@@ -36,7 +41,7 @@ form > label {
    position: relative;
 }
 
-.custom-select::before {
+.select-wrapper .custom-select::before {
    content: "";
    width: 0;
    height: 0;
@@ -50,7 +55,7 @@ form > label {
    left: 10px;
 }
 
-.custom-select select {
+.select-wrapper .custom-select select {
    appearance: none;
    border: none;
    border-radius: inherit;
@@ -58,55 +63,53 @@ form > label {
    width: 100%;
    padding: 8px 12px 8px 45px;
    font-size: 27px;
-   line-height: 32px;
    outline: none;
 }
 
-.custom-select:has(select:focus) {
+.select-wrapper .custom-select:has(select:focus) {
    border: 1px solid #475242;
 }
 
-.custom-select:has(select:focus)::before {
+.select-wrapper .custom-select:has(select:focus)::before {
    border-color: rgba(62, 178, 94, 1) transparent transparent transparent;
 }
 
-/* Checkbox fieldset */
-.checkbox-field {
+fieldset {
    border: none;
    margin-bottom: 39px;
 }
 
-.checkbox-field legend {
+fieldset legend {
    font-size: 26px;
    font-weight: 700;
-   margin-bottom: 17px;
+   margin-bottom: 34px;
 }
 
-.checkbox-field .checkbox-wrapper {
+fieldset .checkbox-wrapper {
    display: flex;
    align-items: center;
    gap: 24px;
    line-height: inherit;
 }
 
-.checkbox-field .checkbox-wrapper + .checkbox-wrapper {
+fieldset .checkbox-wrapper + .checkbox-wrapper {
    margin-top: 17px;
 }
 
-.checkbox-field .checkbox-wrapper input[type="checkbox"] {
+fieldset .checkbox-wrapper input[type="checkbox"] {
    appearance: none;
    background-color: rgba(62, 178, 94, 0.3);
    width: 25px;
    height: 25px;
-   border-radius: 5px;
-   transition: 0.2s;
+   border-radius: 2px;
+   transition: background-color 0.3s;
 }
 
-.checkbox-field .checkbox-wrapper input[type="checkbox"]:checked {
+fieldset .checkbox-wrapper input[type="checkbox"]:checked {
    background-color:rgba(62, 178, 94, 1);
 }
 
-.checkbox-field .checkbox-wrapper label {
+fieldset .checkbox-wrapper label {
    font-size: 26px;
 }
 
@@ -114,6 +117,7 @@ form > label {
    display: flex;
    flex-wrap: wrap;
    gap: 15px 27px;
+   max-width: 420px;
 }
 
 .buttons-wrapper a {
@@ -130,3 +134,244 @@ form > label {
    font-size: 22px;
 }
 
+@media screen and (max-width: 1180px) {
+
+   img {
+      width: 480px;
+      margin-right: 65px;
+   }
+
+   section {
+      width: 400px;
+   }
+
+   .select-wrapper label {
+      font-size: 22px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 380px;
+   }
+
+   .select-wrapper .custom-select select {
+      font-size: 20px;
+   }
+
+   fieldset legend {
+      font-size: 22px;
+   }
+
+   fieldset .checkbox-wrapper input[type="checkbox"] {
+      width: 23px;
+      height: 23px;
+   }
+
+   fieldset .checkbox-wrapper label {
+      font-size: 22px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 360px;
+   }
+}
+
+@media screen and (max-width: 930px) {
+
+   img {
+      width: 400px;
+      margin-right: 50px;
+   }
+
+   section {
+      width: 320px;
+   }
+
+   .select-wrapper label {
+      font-size: 20px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 300px;
+   }
+
+   .select-wrapper .custom-select select {
+      font-size: 20px;
+   }
+
+   fieldset legend {
+      font-size: 22px;
+   }
+
+   fieldset .checkbox-wrapper input[type="checkbox"] {
+      width: 23px;
+      height: 23px;
+   }
+
+   fieldset .checkbox-wrapper label {
+      font-size: 20px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 300px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+      overflow-x: hidden;
+   }
+
+   img {
+      width: 400px;
+      margin: 20px 0;
+   }
+
+   section {
+     width: 360px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .select-wrapper label {
+      font-size: 20px;
+      margin-bottom: 8px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 320px;
+      margin-bottom: 16px;
+   }
+
+   .select-wrapper .custom-select::before {
+      border: 10px solid transparent;
+      border-radius: 5px;
+      border-color: rgba(62, 178, 94, 0.3) transparent transparent transparent;
+      top: 50%;
+      transform: translateY(-10%);
+      left: 6px;
+   }
+
+   .select-wrapper .custom-select select {
+      width: 100%;
+      font-size: 18px;
+      padding-left: 28px;
+   }
+   
+   fieldset {
+      margin-bottom: 26px;
+   }
+
+   fieldset legend {
+      font-size: 20px;
+      margin-bottom: 12px;
+   }
+
+   fieldset .checkbox-wrapper {
+      gap: 7px;
+   }
+   
+   fieldset .checkbox-wrapper + .checkbox-wrapper {
+      margin-top: 7px;
+   }
+
+   fieldset .checkbox-wrapper input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+   }
+
+   fieldset .checkbox-wrapper label {
+      font-size: 20px;
+   }
+
+   form .buttons-wrapper {
+      max-width: 320px;
+      gap: 10px 18px;
+      margin-bottom: 20px;
+   }  
+
+   form .buttons-wrapper button {
+      height: 26px;
+      font-size: 16px;
+   }
+}
+
+@media screen and (max-width: 650px) {
+
+ main {
+      flex-direction: column;
+      justify-content: initial;
+   }
+
+   img {
+      width: 380px;
+      margin: 20px 0 21px;
+   }
+
+   section {
+     width: 326px;
+   }
+
+   .select-wrapper label {
+      font-size: 16px;
+      margin-bottom: 8px;
+   }
+
+   .select-wrapper .custom-select {
+      width: 280px;
+      margin-bottom: 11px;
+   }
+
+   .select-wrapper .custom-select::before {
+      border: 8px solid transparent;
+      border-radius: 5px;
+      border-color: rgba(62, 178, 94, 0.3) transparent transparent transparent;
+      top: 50%;
+      transform: translateY(-10%);
+      left: 8px;
+   }
+
+   .select-wrapper .custom-select select {
+      width: 100%;
+      font-size: 16px;
+      padding-left: 28px;
+   }
+   
+   fieldset {
+      margin-bottom: 26px;
+   }
+
+   fieldset legend {
+      font-size: 16px;
+      margin-bottom: 12px;
+   }
+
+   fieldset .checkbox-wrapper {
+      gap: 7px;
+   }
+   
+   fieldset .checkbox-wrapper + .checkbox-wrapper {
+      margin-top: 7px;
+   }
+
+   fieldset .checkbox-wrapper input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+   }
+
+   fieldset .checkbox-wrapper label {
+      font-size: 16px;
+   }
+
+   form .buttons-wrapper {
+      width: 300px;
+      gap: 10px 18px;
+   }  
+
+   form .buttons-wrapper button {
+      height: 26px;
+      font-size: 16px;
+   }
+}

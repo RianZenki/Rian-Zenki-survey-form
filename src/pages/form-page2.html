@@ -13,15 +13,28 @@
 			<img src="../assets/three.svg" alt="man" />
 			<section>
 				<form action="#">
-					<label for="account-status">How do you decide to invest?</label>
-					<div class="custom-select">
-						<select name="account-status" id="account-status" required>
-							<option value="not">I have not invested yet.</option>
-							<option value="yes">I already have invested.</option>
-						</select>
+					<div class="select-wrapper">
+						<label for="investment-method"
+							>How do you decide to invest?</label
+						>
+						<div class="custom-select">
+							<select
+								name="investment-method"
+								id="investment-method"
+								required
+							>
+								<option value="default">
+									I have not invested yet.
+								</option>
+								<option value="debt-invest">Debt investments.</option>
+								<option value="equity-invest">
+									Equity investments.
+								</option>
+							</select>
+						</div>
 					</div>
 
-					<fieldset class="checkbox-field">
+					<fieldset>
 						<legend>
 							What resources have you used or are you using for your
 							training
@@ -32,19 +45,35 @@
 								type="checkbox"
 								name="books-articles"
 								id="books-articles"
+								value="books-articles"
 							/>
 							<label for="books-articles">books and articles</label>
 						</p>
 						<p class="checkbox-wrapper">
-							<input type="checkbox" name="videos" id="videos" />
-							<label for="videos">youtuve tutorial videos</label>
+							<input
+								type="checkbox"
+								name="videos"
+								id="videos"
+								value="videos"
+							/>
+							<label for="videos">youtube tutorial videos</label>
 						</p>
 						<p class="checkbox-wrapper">
-							<input type="checkbox" name="courses" id="courses" />
+							<input
+								type="checkbox"
+								name="courses"
+								id="courses"
+								value="courses"
+							/>
 							<label for="courses">online or face to face courses</label>
 						</p>
 						<p class="checkbox-wrapper">
-							<input type="checkbox" name="experience" id="experience" />
+							<input
+								type="checkbox"
+								name="experience"
+								id="experience"
+								value="experience"
+							/>
 							<label for="experience"
 								>experience with little investment</label
 							>
