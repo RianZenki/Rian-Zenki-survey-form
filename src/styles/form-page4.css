@@ -25,6 +25,7 @@ section {
    font-size: 26px;
    font-weight: 700;
    margin-bottom: 23px;
+   margin-left: 10px;
 }
 
 .input-wrapper input{
@@ -33,7 +34,7 @@ section {
    padding: 9px 20px;
    border-radius: 20px;
    outline: none;
-   transition: .2s;
+   transition: border .3s;
 }
 
 .input-wrapper input::placeholder{
@@ -72,4 +73,149 @@ input::-webkit-inner-spin-button {
 
    font-size: 22px;
    font-weight: 700;
+}
+
+@media screen and (max-width: 1180px) {
+
+   img {
+      width: 480px;
+      margin-right: 55px;
+   }
+
+   section {
+      width: 400px;
+   }
+
+   .input-wrapper label {
+      font-size: 22px;
+   }
+
+   .input-wrapper input{
+      width: 380px;
+      font-size: 20px;
+   }
+   .buttons-wrapper {
+      max-width: 360px;
+   }
+
+}
+
+@media screen and (max-width: 930px) {
+   img {
+      width: 400px;
+      margin-right: 55px;
+   }
+
+   section {
+      width: 320px;
+   }
+
+   .input-wrapper label {
+      font-size: 20px;
+   }
+
+   .input-wrapper input{
+      width: 300px;
+      font-size: 20px;
+   }
+
+   .buttons-wrapper {
+      max-width: 260px;
+   }
+
+}
+
+@media screen and (max-width: 800px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+   }
+
+   img {
+      width: 400px;
+      margin: 20px 0 23px;
+      overflow-x: hidden;
+   }
+
+   section {
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .input-wrapper label{
+      font-size: 20px;
+      margin-bottom: 10px
+   }
+   
+   .input-wrapper input{
+      font-size: 20px;
+      width: 340px;
+   }
+
+   .input-wrapper + .input-wrapper{
+      margin-top: 14px;
+   }
+
+   .input-wrapper input[type="number"] {
+      width: 110px;
+      margin-bottom: 34px;
+   }
+
+   .buttons-wrapper {
+      max-width: 320px;
+      gap: 11px;
+      margin-bottom: 20px;
+   }
+
+   .buttons-wrapper button {
+      font-size: 20px;
+      height: 30px;
+   }
+}
+
+@media screen and (max-width: 650px) {
+   main {
+      flex-direction: column;
+      justify-content: initial;
+   }
+
+   img {
+      width: 380px;
+      margin: 20px 0 23px;
+   }
+
+   section {
+      width: 302px;
+   }
+
+   .input-wrapper label{
+      font-size: 16px;
+      margin-bottom: 10px
+   }
+   
+   .input-wrapper input{
+      font-size: 16px;
+   }
+
+   .input-wrapper + .input-wrapper{
+      margin-top: 14px;
+   }
+
+   .input-wrapper input[type="number"] {
+      width: 110px;
+      margin-bottom: 34px;
+   }
+
+   .buttons-wrapper {
+      width: 300px;
+      gap: 11px;
+   }
+
+   .buttons-wrapper button {
+      font-size: 16px;
+      height: 26px;
+   }
+
 }
